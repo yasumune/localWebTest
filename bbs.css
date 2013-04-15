@@ -4,11 +4,13 @@ width: 650px; /* 表の幅 */
 border:  1px #c0c0c0 solid ; /* 大枠の境界線 */
 border-collapse: collapse;
 font-size: 80%;
+text-align: center;
 }
 
 /* --- 表タイトル --- */
 table.schedule caption {
 padding-bottom: 5px; /* 表タイトルの下パディング */
+font-size: 120%;
 }
 
 /* --- セル --- */
