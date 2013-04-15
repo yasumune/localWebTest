@@ -1,0 +1,41 @@
+/* --- 表全体 --- */
+table.schedule {
+width: 650px; /* 表の幅 */
+border:  1px #c0c0c0 solid ; /* 大枠の境界線 */
+border-collapse: collapse;
+font-size: 80%;
+}
+
+/* --- 表タイトル --- */
+table.schedule caption {
+padding-bottom: 5px; /* 表タイトルの下パディング */
+}
+
+/* --- セル --- */
+table.schedule th,
+table.schedule td {
+/* width: 20%; */ /* セルの幅（セルの幅を均等にする場合） */
+padding: 6px 8px; /* セルのパディング（上下、左右） */
+border:  1px #c0c0c0 solid ; /* セルの境界線 */
+}
+
+/* --- 見出しセル --- */
+table.schedule thead th {
+background-color:  #deefff ; /* 見出しセルの背景色 */
+text-align: center;
+}
+
+/* --- フッタセル --- */
+table.schedule tfoot td {
+background-color:  #ffffff ; /* フッタセルの背景色 */
+}
+
+/* --- 奇数行 --- */
+table.schedule tr.odd {
+background-color:  #ffffff ; /* 奇数行の背景色 */
+}
+
+/* --- 偶数行 --- */
+table.schedule tr.even {
+background-color:  #f5f5f5 ; /* 偶数行の背景色 */
+}
