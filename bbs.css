@@ -116,3 +116,15 @@ button:hover.css3button{
 		0px -1px 0px rgba(000,000,000,0.7),
 		0px 1px 0px rgba(255,255,255,0.3);
 }
+
+/* --- イメージ枠線非表示 --- */
+.post img {
+padding:  0;
+border: 0 none;
+}
+
+.flatImg img{
+border: 0 !important;
+box-shadow: none !important;
+float: left;
+}
