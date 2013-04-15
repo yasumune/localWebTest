@@ -39,3 +39,47 @@ background-color:  #ffffff ; /* 奇数行の背景色 */
 table.schedule tr.even {
 background-color:  #f5f5f5 ; /* 偶数行の背景色 */
 }
+
+/* --- グラデーション セル --- */
+table.schedule td.grad {
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #25548a), color-stop(0.70, #4bb8f0), color-stop(0.54, #3a83c2), color-stop(0.53, #6098c7), color-stop(0.00, #cfdce9));
+background: -webkit-linear-gradient(top, #cfdce9 0%, #6098c7 53%, #3a83c2 54%, #4bb8f0 70%, #25548a 100%);
+background: -moz-linear-gradient(top, #cfdce9 0%, #6098c7 53%, #3a83c2 54%, #4bb8f0 70%, #25548a 100%);
+background: -o-linear-gradient(top, #cfdce9 0%, #6098c7 53%, #3a83c2 54%, #4bb8f0 70%, #25548a 100%);
+background: -ms-linear-gradient(top, #cfdce9 0%, #6098c7 53%, #3a83c2 54%, #4bb8f0 70%, #25548a 100%);
+background: linear-gradient(top, #cfdce9 0%, #6098c7 53%, #3a83c2 54%, #4bb8f0 70%, #25548a 100%);
+}
+
+/* --- ボタン --- */
+button.css3button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #0a0805;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#ffffff 0%,
+		#ffffff 50%,
+		#d6d6d6);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#ffffff),
+		color-stop(0.50, #ffffff),
+		to(#d6d6d6));
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 3px solid #00080a;
+	-moz-box-shadow:
+		0px 1px 3px rgba(113,182,184,0.5),
+		inset 0px 0px 3px rgba(90,151,173,1);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(113,182,184,0.5),
+		inset 0px 0px 3px rgba(90,151,173,1);
+	box-shadow:
+		0px 1px 3px rgba(113,182,184,0.5),
+		inset 0px 0px 3px rgba(90,151,173,1);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.1),
+		0px 1px 0px rgba(255,255,255,1);
+}
