@@ -25,6 +25,7 @@ border:  1px #c0c0c0 solid ; /* セルの境界線 */
 table.schedule thead th {
 background-color:  #deefff ; /* 見出しセルの背景色 */
 text-align: center;
+font-size: 100%;
 }
 
 /* --- フッタセル --- */
