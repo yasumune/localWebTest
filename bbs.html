@@ -584,11 +584,13 @@ width: 650px; /* 表の幅 */
 border:  1px #c0c0c0 solid ; /* 大枠の境界線 */
 border-collapse: collapse;
 font-size: 80%;
+text-align: center;
 }
 
 /* --- 表タイトル --- */
 table.schedule caption {
 padding-bottom: 5px; /* 表タイトルの下パディング */
+font-size: 120%;
 }
 
 /* --- セル --- */
@@ -603,6 +605,7 @@ border:  1px #c0c0c0 solid ; /* セルの境界線 */
 table.schedule thead th {
 background-color:  #deefff ; /* 見出しセルの背景色 */
 text-align: center;
+font-size: 100%;
 }
 
 /* --- フッタセル --- */
@@ -618,8 +621,110 @@ background-color:  #ffffff ; /* 奇数行の背景色 */
 /* --- 偶数行 --- */
 table.schedule tr.even {
 background-color:  #f5f5f5 ; /* 偶数行の背景色 */
-}]]></b:skin>
+}
 
+/* --- グラデーション セル --- */
+table.schedule td.grad {
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #25548a), color-stop(0.70, #4bb8f0), color-stop(0.54, #3a83c2), color-stop(0.53, #6098c7), color-stop(0.00, #cfdce9));
+background: -webkit-linear-gradient(top, #cfdce9 0%, #6098c7 53%, #3a83c2 54%, #4bb8f0 70%, #25548a 100%);
+background: -moz-linear-gradient(top, #cfdce9 0%, #6098c7 53%, #3a83c2 54%, #4bb8f0 70%, #25548a 100%);
+background: -o-linear-gradient(top, #cfdce9 0%, #6098c7 53%, #3a83c2 54%, #4bb8f0 70%, #25548a 100%);
+background: -ms-linear-gradient(top, #cfdce9 0%, #6098c7 53%, #3a83c2 54%, #4bb8f0 70%, #25548a 100%);
+background: linear-gradient(top, #cfdce9 0%, #6098c7 53%, #3a83c2 54%, #4bb8f0 70%, #25548a 100%);
+}
+
+/* --- ボタン --- */
+button.css3button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #123d54;
+	padding: 4px 15px;
+	background: -moz-linear-gradient(
+		top,
+		#ffffff 0%,
+		#b1b5b8);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#ffffff),
+		to(#b1b5b8));
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #003366;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,1);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,1);
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,1);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.7),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+/* --- ロールオーバー --- */
+button:hover.css3button{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #123d54;
+	padding: 4px 15px;
+	background: -moz-linear-gradient(
+		top,
+		#afd9fa 0%,
+		#588fad);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#afd9fa),
+		to(#588fad));
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #003366;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,1);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,1);
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,1);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.7),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+/* --- イメージ枠線非表示 --- */
+.post img {
+padding:  0;
+border: 0 none;
+}
+
+.flatImg img{
+border: 0 !important;
+box-shadow: none !important;
+float: left;
+}
+
+/* --- デザイン調整 --- */
+.main-inner {padding-top:40px} /* タブバーとブログ本体の パディング幅 */
+.date-outer {margin: -0px 0 10px;} 
+.descriptionwrapper{
+margin-top: -25px; /* タイトルと description の幅 */
+margin-left: 0px;  /* description の left マージン幅 */]]></b:skin>
+
+    <!-- 静的ページの二重タイトル防止 sumidabbsproj start-->
+    <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+		<style>
+			.post-title.entry-title{
+				display: none;
+			}
+		</style>
+	</b:if>
+    
     <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='1040px'/>
       <b:variable default='0' name='main.column.left.width' type='length'/>
@@ -1045,7 +1150,9 @@ head.appendChild(script);
     <b:include name='nextprev'/>
 
     <!-- feed links -->
+    <!-- sumidabbsproj 登録: 投稿 (Atom)&#12301;の表示を消す
     <b:include name='feedLinks'/>
+	-->
 
     <b:if cond='data:top.showStars'>
       <script src='//www.google.com/jsapi' type='text/javascript'/>
@@ -1996,6 +2103,19 @@ head.appendChild(script);
       </macro:include>
       <!-- outside of the include in order to lock Attribution widget -->
       <b:section class='foot' id='footer-3' showaddelement='no'>
+        <b:widget id='Text1' locked='false' title='' type='Text'>
+          <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+        </b:widget>
         <b:widget id='Attribution1' locked='true' title='' type='Attribution'>
           <b:includable id='main'>
     <b:if cond='data:feedbackSurveyLink'>
