@@ -128,3 +128,10 @@ border: 0 !important;
 box-shadow: none !important;
 float: left;
 }
+
+/* --- デザイン調整 --- */
+.main-inner {padding-top:40px} /* タブバーとブログ本体の パディング幅 */
+.date-outer {margin: -0px 0 10px;} 
+.descriptionwrapper{
+margin-top: -25px; /* タイトルと description の幅 */
+margin-left: 0px;  /* description の left マージン幅 */
